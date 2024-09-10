@@ -1,4 +1,3 @@
-%%writefile audio.py
 import streamlit as st
 
 import transformers
