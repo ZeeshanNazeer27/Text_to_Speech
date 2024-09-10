@@ -11,9 +11,9 @@ st.subheader("Converting Text to Speech")
 gender = st.selectbox("Choose voice type", ('Male', 'Female'))
 
 if gender == 'Male':
-    pipe = pipeline("text-to-speech", model="suno/bark-small", device="cuda")
+    pipe = pipeline("text-to-speech", model="suno/bark-small", device="cpu")
 else:
-    pipe = pipeline("text-to-speech", model="suno/bark", device="cuda") 
+    pipe = pipeline("text-to-speech", model="suno/bark", device="cpu") 
 
 text = st.text_input("Enter your text here...", value="")
 
